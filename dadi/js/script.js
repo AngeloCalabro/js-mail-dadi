@@ -28,3 +28,45 @@ const play = function () {
 
 };
 btn.addEventListener('click', play);
+
+let btnB = document.getElementById('btn-b');
+let dadoUnoB = document.getElementById('dado-unob')
+let dadoDueB = document.getElementById('dado-dueb')
+let dadoTreB = document.getElementById('dado-treb')
+let numeroFacceB = 6;
+
+const playB = function () {
+
+    for (i = 1; i <= 1; i++) {
+
+        let casualeUnoB = Math.random() * numeroFacceB;
+        let casualeDueB = Math.random() * numeroFacceB;
+        let casualeTreB = Math.random() * numeroFacceB;
+        let numeroCasualeUnoB = Math.floor(casualeUnoB);
+        let numeroCasualeDueB = Math.floor(casualeDueB);
+        let numeroCasualeTreB = Math.floor(casualeTreB);
+        dadoUnoB.innerHTML = numeroCasualeUnoB;
+        dadoDueB.innerHTML = numeroCasualeDueB;
+        dadoTreB.innerHTML = numeroCasualeTreB;
+        console.log(numeroCasualeUnoB, numeroCasualeDueB, numeroCasualeTreB);
+
+        let msgb = document.getElementById('p-b')
+        if (numeroCasualeDueB > numeroCasualeTreB && numeroCasualeDueB > numeroCasualeUnoB) {
+            msgb.innerHTML = 'Ha vinto il player 2!';
+        } else if (numeroCasualeUnoB > numeroCasualeDueB && numeroCasualeUnoB > numeroCasualeTreB) {
+            msgb.innerHTML = 'Ha vinto il player 1!';
+        } else if (numeroCasualeTreB > numeroCasualeDueB && numeroCasualeTreB > numeroCasualeUnoB) {
+            msgb.innerHTML = 'Ha vinto il player 3!';
+        } else if (numeroCasualeUnoB == numeroCasualeDueB) {
+            msgb.innerHTML = 'Pareggio tra Player 1 e Player 2';
+        } else if (numeroCasualeDueB == numeroCasualeTreB) {
+            msgb.innerHTML = 'Pareggio tra Player 2 e Player 3';
+        } else if (numeroCasualeUnoB == numeroCasualeTreB) {
+            msgb.innerHTML = 'Pareggio tra Player 1 e Player 3';
+        } else {
+            msgb.innerHTML = 'Pareggio';
+        };
+    };
+};
+
+btnB.addEventListener('click', playB);
