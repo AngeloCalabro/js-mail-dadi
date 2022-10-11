@@ -13,7 +13,7 @@ const findMail = function () {
     for (let i = 0; i < mailInputClient; i++) {
         const arrayValue = mailInputClient[i];
         if (mailValue == arrayValue) {
-            checkEmail = true;
+            checkMail = true;
         }
     }
     if (checkMail) {
