@@ -7,8 +7,8 @@ const play = function () {
 
     for (i = 1; i <= 1; i++) {
 
-        let casualeUno = Math.random() * numeroFacce;
-        let casualeDue = Math.random() * numeroFacce;
+        let casualeUno = Math.random() * numeroFacce + 1;
+        let casualeDue = Math.random() * numeroFacce + 1;
         let numeroCasualeUno = Math.floor(casualeUno);
         let numeroCasualeDue = Math.floor(casualeDue);
         dadoUno.innerHTML = numeroCasualeUno;
@@ -33,18 +33,18 @@ let btnB = document.getElementById('btn-b');
 let dadoUnoB = document.getElementById('dado-unob')
 let dadoDueB = document.getElementById('dado-dueb')
 let dadoTreB = document.getElementById('dado-treb')
-let numeroFacceB = 6;
+let numeroFacceB = 1;
 
 const playB = function () {
 
-    for (i = 1; i <= 1; i++) {
+    for (i = 0; i <= 1; i++) {
 
-        let casualeUnoB = Math.random() * numeroFacceB;
-        let casualeDueB = Math.random() * numeroFacceB;
-        let casualeTreB = Math.random() * numeroFacceB;
-        let numeroCasualeUnoB = Math.floor(casualeUnoB);
-        let numeroCasualeDueB = Math.floor(casualeDueB);
-        let numeroCasualeTreB = Math.floor(casualeTreB);
+        let casualeUnoB = Math.random() * numeroFacceB + 1;
+        let casualeDueB = Math.random() * numeroFacceB + 1;
+        let casualeTreB = Math.random() * numeroFacceB + 1;
+        let numeroCasualeUnoB = parseInt(Math.floor(casualeUnoB));
+        let numeroCasualeDueB = parseInt(Math.floor(casualeDueB));
+        let numeroCasualeTreB = parseInt(Math.floor(casualeTreB));
         dadoUnoB.innerHTML = numeroCasualeUnoB;
         dadoDueB.innerHTML = numeroCasualeDueB;
         dadoTreB.innerHTML = numeroCasualeTreB;
