@@ -33,7 +33,7 @@ let btnB = document.getElementById('btn-b');
 let dadoUnoB = document.getElementById('dado-unob')
 let dadoDueB = document.getElementById('dado-dueb')
 let dadoTreB = document.getElementById('dado-treb')
-let numeroFacceB = 1;
+let numeroFacceB = 3;
 
 const playB = function () {
 
@@ -57,11 +57,11 @@ const playB = function () {
             msgb.innerHTML = 'Ha vinto il player 1!';
         } else if (numeroCasualeTreB > numeroCasualeDueB && numeroCasualeTreB > numeroCasualeUnoB) {
             msgb.innerHTML = 'Ha vinto il player 3!';
-        } else if (numeroCasualeUnoB == numeroCasualeDueB) {
+        } else if (numeroCasualeUnoB == numeroCasualeDueB && numeroCasualeTreB != numeroCasualeUnoB) {
             msgb.innerHTML = 'Pareggio tra Player 1 e Player 2';
-        } else if (numeroCasualeDueB == numeroCasualeTreB) {
+        } else if (numeroCasualeDueB == numeroCasualeTreB && numeroCasualeTreB != numeroCasualeUnoB) {
             msgb.innerHTML = 'Pareggio tra Player 2 e Player 3';
-        } else if (numeroCasualeUnoB == numeroCasualeTreB) {
+        } else if (numeroCasualeUnoB == numeroCasualeTreB && numeroCasualeTreB != numeroCasualeDueB) {
             msgb.innerHTML = 'Pareggio tra Player 1 e Player 3';
         } else {
             msgb.innerHTML = 'Pareggio';
